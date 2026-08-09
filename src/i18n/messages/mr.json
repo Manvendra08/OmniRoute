@@ -937,7 +937,7 @@
   "disabled": "Disabled",
   "featureFlagOmnirouteEmergencyFallbackDescription": "Route budget-exhausted requests to the emergency free fallback provider/model.",
   "featureFlagArenaEloSyncEnabledDescription": "Enable periodic Arena AI leaderboard ELO sync for model intelligence rankings.",
-  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/<provider>/<model> mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
+  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/&lt;provider&gt;/&lt;model&gt; mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
   "sidebar": {
     "home": "Home",
     "dashboard": "Dashboard",
@@ -2514,7 +2514,7 @@
       "always": "नेहमी"
     },
     "ccDiscoveryInfoButton": "__MISSING__:How to enable discovery in Claude Code",
-    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
+    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
     "ccDiscoveryInfoLink": "__MISSING__:Open Feature Flags",
     "ccOnboardingTitle": "__MISSING__:settings.json for gateway model discovery",
     "ccOnboardingCopy": "__MISSING__:Copy",
@@ -5202,7 +5202,7 @@
     "interceptionLoadError": "इंटरसेप्शन सेटिंग्ज लोड करण्यात अयशस्वी: {error}",
     "interceptionSaveError": "इंटरसेप्शन सेटिंग्ज सेव्ह करण्यात अयशस्वी: {error}",
     "ccAliasSectionTitle": "__MISSING__:Expose in Claude Code (claude/…)",
-    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
+    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
     "ccAliasProviderLevelLabel": "__MISSING__:Provider default",
     "ccAliasModelOverridesLabel": "__MISSING__:Per-model overrides",
     "ccAliasModelOverrideAriaLabel": "__MISSING__:Override for {modelId}",
@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "ऑर्गनायझेशन डोमेन आवश्यक आहे",
     "denoRelayDeployFailed": "Deno Deploy अयशस्वी झाले",
     "denoRelayTokenHint": "console.deno.com → Organization → Settings → Organization Tokens मधील ऑर्गनायझेशन टोकन (प्रिफिक्स ddo_). डिप्लॉयसाठी एकदाच वापरले जाते आणि कधीही स्टोअर केले जात नाही.",
-    "denoRelayOrgDomainHint": "तुमच्या Deno Deploy ऑर्गनायझेशनचे डीफॉल्ट डोमेन (उदा. acme.deno.net). रिले https://<app-name>.<org-slug>.deno.net येथे उपलब्ध असेल.",
+    "denoRelayOrgDomainHint": "तुमच्या Deno Deploy ऑर्गनायझेशनचे डीफॉल्ट डोमेन (उदा. acme.deno.net). रिले https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net येथे उपलब्ध असेल.",
     "proxyFreePoolFilterProtocol": "प्रोटोकॉलनुसार फिल्टर करा",
     "proxyFreePoolProtocol": "प्रोटोकॉल",
     "proxyFreePoolCountryPlaceholder": "देश (उदा. US)",
@@ -11877,7 +11877,7 @@
         "description": "प्रदाता-मॉडेल सिंक्रोनाइझेशननंतर, लाइव्ह कॅटलॉगमधून ~/.codex/*.config.toml प्रोफाइल्स पुन्हा तयार करा. हे सक्रिय किंवा डीफॉल्ट Codex कॉन्फिगरेशन कधीही बदलत नाही आणि डीफॉल्टनुसार बंद असते."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "प्रदाता-मॉडेल सिंक्रोनाइझेशननंतर, लाइव्ह कॅटलॉगमधून ~/.claude/profiles/<name>/settings.json प्रोफाइल्स पुन्हा तयार करा. हे सक्रिय किंवा डीफॉल्ट Claude कॉन्फिगरेशन कधीही बदलत नाही आणि डीफॉल्टनुसार बंद असते."
+        "description": "प्रदाता-मॉडेल सिंक्रोनाइझेशननंतर, लाइव्ह कॅटलॉगमधून ~/.claude/profiles/&lt;name&gt;/settings.json प्रोफाइल्स पुन्हा तयार करा. हे सक्रिय किंवा डीफॉल्ट Claude कॉन्फिगरेशन कधीही बदलत नाही आणि डीफॉल्टनुसार बंद असते."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "स्थानिक इन्स्टन्स हेल्थ-चेक एंडपॉइंट अक्षम करा."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "भागीदार लिंक",
     "dismissAriaLabel": "बंद करा"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise <gateway-alias>/<model> mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise &lt;gateway-alias&gt;/&lt;model&gt; mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
   "radarPage": {
     "title": "रडार कॅटलॉग",
     "subtitle": "समुदाय बुद्धिमत्तेने समृद्ध मोफत मॉडेल कॅटलॉग",

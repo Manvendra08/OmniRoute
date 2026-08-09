@@ -937,7 +937,7 @@
   "disabled": "Zakázáno",
   "featureFlagOmnirouteEmergencyFallbackDescription": "Směrovat požadavky s vyčerpaným rozpočtem na nouzového bezplatného záložního poskytovatele/model.",
   "featureFlagArenaEloSyncEnabledDescription": "Povolit periodickou synchronizaci ELO z žebříčku Arena AI pro hodnocení inteligence modelů.",
-  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/<provider>/<model> mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
+  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/&lt;provider&gt;/&lt;model&gt; mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
   "sidebar": {
     "home": "Domov",
     "dashboard": "Nástěnka",
@@ -2514,7 +2514,7 @@
       "always": "Vždy"
     },
     "ccDiscoveryInfoButton": "__MISSING__:How to enable discovery in Claude Code",
-    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
+    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
     "ccDiscoveryInfoLink": "__MISSING__:Open Feature Flags",
     "ccOnboardingTitle": "__MISSING__:settings.json for gateway model discovery",
     "ccOnboardingCopy": "__MISSING__:Copy",
@@ -5202,7 +5202,7 @@
     "interceptionLoadError": "Nepodařilo se načíst nastavení zachytávání: {error}",
     "interceptionSaveError": "Nepodařilo se uložit nastavení zachytávání: {error}",
     "ccAliasSectionTitle": "__MISSING__:Expose in Claude Code (claude/…)",
-    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
+    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
     "ccAliasProviderLevelLabel": "__MISSING__:Provider default",
     "ccAliasModelOverridesLabel": "__MISSING__:Per-model overrides",
     "ccAliasModelOverrideAriaLabel": "__MISSING__:Override for {modelId}",
@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "Doména organizace je vyžadována",
     "denoRelayDeployFailed": "Deno Deploy se nezdařil",
     "denoRelayTokenHint": "Token organizace (předpona ddo_) z console.deno.com → Organization → Settings → Organization Tokens. Použije se jednou pro nasazení a nikdy se neukládá.",
-    "denoRelayOrgDomainHint": "Výchozí doména vaší organizace Deno Deploy (např. acme.deno.net). Relay bude dostupný na adrese https://<app-name>.<org-slug>.deno.net.",
+    "denoRelayOrgDomainHint": "Výchozí doména vaší organizace Deno Deploy (např. acme.deno.net). Relay bude dostupný na adrese https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net.",
     "proxyFreePoolFilterProtocol": "Filtrovat podle protokolu",
     "proxyFreePoolProtocol": "Protokol",
     "proxyFreePoolCountryPlaceholder": "Země (např. US)",
@@ -11877,7 +11877,7 @@
         "description": "Po synchronizaci poskytovatelů a modelů regenerovat profily ~/.codex/*.config.toml z živého katalogu. Toto nikdy nemění aktivní nebo výchozí konfiguraci Codexu a je ve výchozím nastavení vypnuto."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "Po synchronizaci poskytovatelů a modelů regenerovat profily ~/.claude/profiles/<name>/settings.json z živého katalogu. Toto nikdy nemění aktivní nebo výchozí konfiguraci Claude a je ve výchozím nastavení vypnuto."
+        "description": "Po synchronizaci poskytovatelů a modelů regenerovat profily ~/.claude/profiles/&lt;name&gt;/settings.json z živého katalogu. Toto nikdy nemění aktivní nebo výchozí konfiguraci Claude a je ve výchozím nastavení vypnuto."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "Zakázat koncový bod kontroly stavu lokální instance."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "Partnerský odkaz",
     "dismissAriaLabel": "Zavřít"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise <gateway-alias>/<model> mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise &lt;gateway-alias&gt;/&lt;model&gt; mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
   "radarPage": {
     "title": "Radar katalog",
     "subtitle": "Bezplatný modelový katalog obohacený komunitními informacemi",

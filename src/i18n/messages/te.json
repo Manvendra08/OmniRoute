@@ -937,7 +937,7 @@
   "disabled": "నిలిపివేయబడింది",
   "featureFlagOmnirouteEmergencyFallbackDescription": "బడ్జెట్ ముగిసిపోయిన అభ్యర్థనలను అత్యవసర ఉచిత ఫాల్‌బ్యాక్ ప్రొవైడర్/మోడల్‌కు రూట్ చేయండి.",
   "featureFlagArenaEloSyncEnabledDescription": "మోడల్ ఇంటెలిజెన్స్ ర్యాంకింగ్‌ల కోసం క్రమానుగత Arena AI లీడర్‌బోర్డ్ ELO సమకాలీకరణను ప్రారంభించండి.",
-  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/<provider>/<model> mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
+  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/&lt;provider&gt;/&lt;model&gt; mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
   "sidebar": {
     "home": "Home",
     "dashboard": "Dashboard",
@@ -2514,7 +2514,7 @@
       "always": "ఎల్లప్పుడూ"
     },
     "ccDiscoveryInfoButton": "__MISSING__:How to enable discovery in Claude Code",
-    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
+    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
     "ccDiscoveryInfoLink": "__MISSING__:Open Feature Flags",
     "ccOnboardingTitle": "__MISSING__:settings.json for gateway model discovery",
     "ccOnboardingCopy": "__MISSING__:Copy",
@@ -5202,7 +5202,7 @@
     "interceptionLoadError": "ఇంటర్‌సెప్షన్ సెట్టింగ్‌లను లోడ్ చేయడం విఫలమైంది: {error}",
     "interceptionSaveError": "ఇంటర్‌సెప్షన్ సెట్టింగ్‌లను సేవ్ చేయడం విఫలమైంది: {error}",
     "ccAliasSectionTitle": "__MISSING__:Expose in Claude Code (claude/…)",
-    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
+    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
     "ccAliasProviderLevelLabel": "__MISSING__:Provider default",
     "ccAliasModelOverridesLabel": "__MISSING__:Per-model overrides",
     "ccAliasModelOverrideAriaLabel": "__MISSING__:Override for {modelId}",
@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "సంస్థ డొమైన్ అవసరం",
     "denoRelayDeployFailed": "Deno Deploy విఫలమైంది",
     "denoRelayTokenHint": "console.deno.com → Organization → Settings → Organization Tokens నుండి సంస్థ టోకెన్ (ప్రిఫిక్స్ ddo_). డిప్లాయ్ కోసం ఒకసారి ఉపయోగించబడుతుంది మరియు ఎప్పటికీ నిల్వ చేయబడదు.",
-    "denoRelayOrgDomainHint": "మీ Deno Deploy సంస్థ యొక్క డిఫాల్ట్ డొమైన్ (ఉదా. acme.deno.net). రిలే https://<app-name>.<org-slug>.deno.net వద్ద అందుబాటులో ఉంటుంది.",
+    "denoRelayOrgDomainHint": "మీ Deno Deploy సంస్థ యొక్క డిఫాల్ట్ డొమైన్ (ఉదా. acme.deno.net). రిలే https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net వద్ద అందుబాటులో ఉంటుంది.",
     "proxyFreePoolFilterProtocol": "ప్రోటోకాల్ ద్వారా ఫిల్టర్ చేయండి",
     "proxyFreePoolProtocol": "ప్రోటోకాల్",
     "proxyFreePoolCountryPlaceholder": "దేశం (ఉదా. US)",
@@ -11877,7 +11877,7 @@
         "description": "ప్రొవైడర్-మోడల్ సమకాలీకరణ తర్వాత, లైవ్ కేటలాగ్ నుండి ~/.codex/*.config.toml ప్రొఫైల్‌లను తిరిగి సృష్టించండి. ఇది సక్రియ లేదా డిఫాల్ట్ Codex కాన్గ్రిగేషన్‌ను ఎప్పటికీ మార్చదు మరియు డిఫాల్ట్‌గా ఆఫ్‌లో ఉంటుంది."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "ప్రొవైడర్-మోడల్ సమకాలీకరణ తర్వాత, లైవ్ కేటలాగ్ నుండి ~/.claude/profiles/<name>/settings.json ప్రొఫైల్‌లను తిరిగి సృష్టించండి. ఇది సక్రియ లేదా డిఫాల్ట్ Claude కాన్ఫిగరేషన్‌ను ఎప్పటికీ మార్చదు మరియు డిఫాల్ట్‌గా ఆఫ్‌లో ఉంటుంది."
+        "description": "ప్రొవైడర్-మోడల్ సమకాలీకరణ తర్వాత, లైవ్ కేటలాగ్ నుండి ~/.claude/profiles/&lt;name&gt;/settings.json ప్రొఫైల్‌లను తిరిగి సృష్టించండి. ఇది సక్రియ లేదా డిఫాల్ట్ Claude కాన్ఫిగరేషన్‌ను ఎప్పటికీ మార్చదు మరియు డిఫాల్ట్‌గా ఆఫ్‌లో ఉంటుంది."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "స్థానిక ఇన్‌స్టాన్స్ హెల్త్-చెక్ ఎండ్‌పాయింట్‌ను నిలిపివేయండి."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "భాగస్వామి లింక్",
     "dismissAriaLabel": "తీసివేయి"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise <gateway-alias>/<model> mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise &lt;gateway-alias&gt;/&lt;model&gt; mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
   "radarPage": {
     "title": "రాడార్ కాటలాగ్",
     "subtitle": "సమాజ మేధస్సుతో సమృద్ధి చేసిన ఉచిత మోడల్ కాటలాగ్",

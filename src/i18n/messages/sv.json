@@ -937,7 +937,7 @@
   "disabled": "Inaktiverad",
   "featureFlagOmnirouteEmergencyFallbackDescription": "Dirigera anrop med förbrukad budget till den kostnadsfria reservleverantören/-modellen för nödfall.",
   "featureFlagArenaEloSyncEnabledDescription": "Aktivera periodisk synkronisering av Arena AI-topplistans ELO för rankning av modellintelligens.",
-  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/<provider>/<model> mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
+  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/&lt;provider&gt;/&lt;model&gt; mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
   "sidebar": {
     "home": "Hem",
     "dashboard": "Instrumentpanel",
@@ -2514,7 +2514,7 @@
       "always": "Alltid"
     },
     "ccDiscoveryInfoButton": "__MISSING__:How to enable discovery in Claude Code",
-    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
+    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
     "ccDiscoveryInfoLink": "__MISSING__:Open Feature Flags",
     "ccOnboardingTitle": "__MISSING__:settings.json for gateway model discovery",
     "ccOnboardingCopy": "__MISSING__:Copy",
@@ -5202,7 +5202,7 @@
     "interceptionLoadError": "Kunde inte läsa in inställningar för interception: {error}",
     "interceptionSaveError": "Kunde inte spara inställningar för interception: {error}",
     "ccAliasSectionTitle": "__MISSING__:Expose in Claude Code (claude/…)",
-    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
+    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
     "ccAliasProviderLevelLabel": "__MISSING__:Provider default",
     "ccAliasModelOverridesLabel": "__MISSING__:Per-model overrides",
     "ccAliasModelOverrideAriaLabel": "__MISSING__:Override for {modelId}",
@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "Organisationsdomän krävs",
     "denoRelayDeployFailed": "Deno Deploy misslyckades",
     "denoRelayTokenHint": "Organisations-token (prefix ddo_) från console.deno.com → Organization → Settings → Organization Tokens. Används en gång för deploy och sparas aldrig.",
-    "denoRelayOrgDomainHint": "Din Deno Deploy-organisations standarddomän (t.ex. acme.deno.net). Reläet kommer att vara nåbart på https://<app-name>.<org-slug>.deno.net.",
+    "denoRelayOrgDomainHint": "Din Deno Deploy-organisations standarddomän (t.ex. acme.deno.net). Reläet kommer att vara nåbart på https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net.",
     "proxyFreePoolFilterProtocol": "Filtrera efter protokoll",
     "proxyFreePoolProtocol": "Protokoll",
     "proxyFreePoolCountryPlaceholder": "Land (t.ex. US)",
@@ -11877,7 +11877,7 @@
         "description": "Efter synkronisering av leverantörsmodell, generera om ~/.codex/*.config.toml-profiler från den aktiva katalogen. Detta ändrar aldrig den aktiva eller standardinställda Codex-konfigurationen och är inaktiverat som standard."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "Efter synkronisering av leverantörsmodell, generera om ~/.claude/profiles/<name>/settings.json-profiler från den aktiva katalogen. Detta ändrar aldrig den aktiva eller standardinställda Claude-konfigurationen och är inaktiverat som standard."
+        "description": "Efter synkronisering av leverantörsmodell, generera om ~/.claude/profiles/&lt;name&gt;/settings.json-profiler från den aktiva katalogen. Detta ändrar aldrig den aktiva eller standardinställda Claude-konfigurationen och är inaktiverat som standard."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "Inaktivera slutpunkten för hälsokontroll av den lokala instansen."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "Partnerlänk",
     "dismissAriaLabel": "Avvisa"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise <gateway-alias>/<model> mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise &lt;gateway-alias&gt;/&lt;model&gt; mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
   "radarPage": {
     "title": "Radar Katalog",
     "subtitle": "Gratis modellkatalog berikad med gemenskapsintelligens",

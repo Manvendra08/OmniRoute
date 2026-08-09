@@ -937,7 +937,7 @@
   "disabled": "Disabled",
   "featureFlagOmnirouteEmergencyFallbackDescription": "Route budget-exhausted requests to the emergency free fallback provider/model.",
   "featureFlagArenaEloSyncEnabledDescription": "Enable periodic Arena AI leaderboard ELO sync for model intelligence rankings.",
-  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/<provider>/<model> mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
+  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/&lt;provider&gt;/&lt;model&gt; mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
   "sidebar": {
     "home": "Rumah",
     "dashboard": "Papan pemuka",
@@ -2514,7 +2514,7 @@
       "always": "Sentiasa"
     },
     "ccDiscoveryInfoButton": "__MISSING__:How to enable discovery in Claude Code",
-    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
+    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
     "ccDiscoveryInfoLink": "__MISSING__:Open Feature Flags",
     "ccOnboardingTitle": "__MISSING__:settings.json for gateway model discovery",
     "ccOnboardingCopy": "__MISSING__:Copy",
@@ -5202,7 +5202,7 @@
     "interceptionLoadError": "Gagal memuatkan tetapan pintasan: {error}",
     "interceptionSaveError": "Gagal menyimpan tetapan pintasan: {error}",
     "ccAliasSectionTitle": "__MISSING__:Expose in Claude Code (claude/…)",
-    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
+    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
     "ccAliasProviderLevelLabel": "__MISSING__:Provider default",
     "ccAliasModelOverridesLabel": "__MISSING__:Per-model overrides",
     "ccAliasModelOverrideAriaLabel": "__MISSING__:Override for {modelId}",
@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "Domain organisasi diperlukan",
     "denoRelayDeployFailed": "Deno Deploy gagal",
     "denoRelayTokenHint": "Token organisasi (awalan ddo_) daripada console.deno.com → Organisasi → Tetapan → Token Organisasi. Digunakan sekali untuk deploy dan tidak pernah disimpan.",
-    "denoRelayOrgDomainHint": "Domain lalai organisasi Deno Deploy anda (cth. acme.deno.net). Geganti akan dapat dihubungi di https://<app-name>.<org-slug>.deno.net.",
+    "denoRelayOrgDomainHint": "Domain lalai organisasi Deno Deploy anda (cth. acme.deno.net). Geganti akan dapat dihubungi di https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net.",
     "proxyFreePoolFilterProtocol": "Tapis mengikut protokol",
     "proxyFreePoolProtocol": "Protokol",
     "proxyFreePoolCountryPlaceholder": "Negara (cth. US)",
@@ -11877,7 +11877,7 @@
         "description": "Selepas penyegerakan penyedia-model, jana semula profil ~/.codex/*.config.toml daripada katalog langsung. Ini tidak pernah mengubah konfigurasi Codex yang aktif atau lalai dan dinyahdayakan secara lalai."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "Selepas penyegerakan penyedia-model, jana semula profil ~/.claude/profiles/<name>/settings.json daripada katalog langsung. Ini tidak pernah mengubah konfigurasi Claude yang aktif atau lalai dan dinyahdayakan secara lalai."
+        "description": "Selepas penyegerakan penyedia-model, jana semula profil ~/.claude/profiles/&lt;name&gt;/settings.json daripada katalog langsung. Ini tidak pernah mengubah konfigurasi Claude yang aktif atau lalai dan dinyahdayakan secara lalai."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "Nyahdayakan titik akhir pemeriksaan kesihatan tika tempatan."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "Pautan rakan kongsi",
     "dismissAriaLabel": "Tutup"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise <gateway-alias>/<model> mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise &lt;gateway-alias&gt;/&lt;model&gt; mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
   "radarPage": {
     "title": "Katalog Radar",
     "subtitle": "Katalog model percuma yang diperkaya dengan kecerdasan komuniti",

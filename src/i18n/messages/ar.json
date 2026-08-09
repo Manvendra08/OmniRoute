@@ -937,7 +937,7 @@
   "disabled": "معطل",
   "featureFlagOmnirouteEmergencyFallbackDescription": "توجيه الطلبات التي استنفدت الميزانية إلى موفر/نموذج الاحتياط المجاني للطوارئ.",
   "featureFlagArenaEloSyncEnabledDescription": "تمكين المزامنة الدورية لتصنيف ELO للوحة صدارة Arena AI لتصنيفات ذكاء النماذج.",
-  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/<provider>/<model> mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
+  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/&lt;provider&gt;/&lt;model&gt; mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
   "sidebar": {
     "home": "الصفحة الرئيسية",
     "dashboard": "لوحة القيادة",
@@ -2514,7 +2514,7 @@
       "always": "دائمًا"
     },
     "ccDiscoveryInfoButton": "__MISSING__:How to enable discovery in Claude Code",
-    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
+    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
     "ccDiscoveryInfoLink": "__MISSING__:Open Feature Flags",
     "ccOnboardingTitle": "__MISSING__:settings.json for gateway model discovery",
     "ccOnboardingCopy": "__MISSING__:Copy",
@@ -5202,7 +5202,7 @@
     "interceptionLoadError": "فشل تحميل إعدادات الاعتراض: {error}",
     "interceptionSaveError": "فشل حفظ إعدادات الاعتراض: {error}",
     "ccAliasSectionTitle": "__MISSING__:Expose in Claude Code (claude/…)",
-    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
+    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
     "ccAliasProviderLevelLabel": "__MISSING__:Provider default",
     "ccAliasModelOverridesLabel": "__MISSING__:Per-model overrides",
     "ccAliasModelOverrideAriaLabel": "__MISSING__:Override for {modelId}",
@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "نطاق المؤسسة مطلوب",
     "denoRelayDeployFailed": "فشل Deno Deploy",
     "denoRelayTokenHint": "رمز المؤسسة المميز (البادئة ddo_) من console.deno.com → Organization → Settings → Organization Tokens. يُستخدم مرة واحدة للنشر ولا يتم تخزينه أبدًا.",
-    "denoRelayOrgDomainHint": "النطاق الافتراضي لمؤسسة Deno Deploy الخاصة بك (مثل acme.deno.net). سيكون المرحل متاحًا على https://<app-name>.<org-slug>.deno.net.",
+    "denoRelayOrgDomainHint": "النطاق الافتراضي لمؤسسة Deno Deploy الخاصة بك (مثل acme.deno.net). سيكون المرحل متاحًا على https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net.",
     "proxyFreePoolFilterProtocol": "التصفية حسب البروتوكول",
     "proxyFreePoolProtocol": "البروتوكول",
     "proxyFreePoolCountryPlaceholder": "البلد (مثل US)",
@@ -11877,7 +11877,7 @@
         "description": "بعد مزامنة المزود والنموذج، أعد إنشاء ملفات التعريف ~/.codex/*.config.toml من الكتالوج المباشر. لا يغير هذا أبداً تكوين Codex النشط أو الافتراضي ويكون معطلاً بشكل افتراضي."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "بعد مزامنة المزود والنموذج، أعد إنشاء ملفات التعريف ~/.claude/profiles/<name>/settings.json من الكتالوج المباشر. لا يغير هذا أبداً تكوين Claude النشط أو الافتراضي ويكون معطلاً بشكل افتراضي."
+        "description": "بعد مزامنة المزود والنموذج، أعد إنشاء ملفات التعريف ~/.claude/profiles/&lt;name&gt;/settings.json من الكتالوج المباشر. لا يغير هذا أبداً تكوين Claude النشط أو الافتراضي ويكون معطلاً بشكل افتراضي."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "تعطيل نقطة نهاية فحص صحة المثيل المحلي."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "رابط شريك",
     "dismissAriaLabel": "تجاهل"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise <gateway-alias>/<model> mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise &lt;gateway-alias&gt;/&lt;model&gt; mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
   "radarPage": {
     "title": "كتالوج الرادار",
     "subtitle": "كتالوج نموذج مجاني معزز بذكاء المجتمع",

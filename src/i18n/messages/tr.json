@@ -937,7 +937,7 @@
   "disabled": "Devre dışı",
   "featureFlagOmnirouteEmergencyFallbackDescription": "Bütçesi tükenmiş istekleri acil durum ücretsiz yedek sağlayıcıya/modele yönlendirin.",
   "featureFlagArenaEloSyncEnabledDescription": "Model zekası sıralamaları için periyodik Arena AI liderlik tablosu ELO senkronizasyonunu etkinleştirin.",
-  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/<provider>/<model> mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
+  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/&lt;provider&gt;/&lt;model&gt; mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
   "sidebar": {
     "home": "Ana Sayfa",
     "dashboard": "Kontrol Paneli",
@@ -2514,7 +2514,7 @@
       "always": "Her zaman"
     },
     "ccDiscoveryInfoButton": "__MISSING__:How to enable discovery in Claude Code",
-    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
+    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
     "ccDiscoveryInfoLink": "__MISSING__:Open Feature Flags",
     "ccOnboardingTitle": "__MISSING__:settings.json for gateway model discovery",
     "ccOnboardingCopy": "__MISSING__:Copy",
@@ -5202,7 +5202,7 @@
     "interceptionLoadError": "Yakalama ayarları yüklenemedi: {error}",
     "interceptionSaveError": "Yakalama ayarları kaydedilemedi: {error}",
     "ccAliasSectionTitle": "__MISSING__:Expose in Claude Code (claude/…)",
-    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
+    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
     "ccAliasProviderLevelLabel": "__MISSING__:Provider default",
     "ccAliasModelOverridesLabel": "__MISSING__:Per-model overrides",
     "ccAliasModelOverrideAriaLabel": "__MISSING__:Override for {modelId}",
@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "Organizasyon alanı gereklidir",
     "denoRelayDeployFailed": "Deno Deploy başarısız oldu",
     "denoRelayTokenHint": "console.deno.com → Organization → Settings → Organization Tokens adresinden alınan organizasyon belirteci (ddo_ öneki). Dağıtım için bir kez kullanılır ve asla saklanmaz.",
-    "denoRelayOrgDomainHint": "Deno Deploy organizasyonunuzun varsayılan alanı (ör. acme.deno.net). Geçişe https://<app-name>.<org-slug>.deno.net adresinden erişilebilecektir.",
+    "denoRelayOrgDomainHint": "Deno Deploy organizasyonunuzun varsayılan alanı (ör. acme.deno.net). Geçişe https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net adresinden erişilebilecektir.",
     "proxyFreePoolFilterProtocol": "Protokole göre filtrele",
     "proxyFreePoolProtocol": "Protokol",
     "proxyFreePoolCountryPlaceholder": "Ülke (ör. US)",
@@ -11877,7 +11877,7 @@
         "description": "Sağlayıcı-model senkronizasyonundan sonra, canlı katalogdan ~/.codex/*.config.toml profillerini yeniden oluşturun. Bu işlem aktif veya varsayılan Codex yapılandırmasını asla değiştirmez ve varsayılan olarak kapalıdır."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "Sağlayıcı-model senkronizasyonundan sonra, canlı katalogdan ~/.claude/profiles/<name>/settings.json profillerini yeniden oluşturun. Bu işlem aktif veya varsayılan Claude yapılandırmasını asla değiştirmez ve varsayılan olarak kapalıdır."
+        "description": "Sağlayıcı-model senkronizasyonundan sonra, canlı katalogdan ~/.claude/profiles/&lt;name&gt;/settings.json profillerini yeniden oluşturun. Bu işlem aktif veya varsayılan Claude yapılandırmasını asla değiştirmez ve varsayılan olarak kapalıdır."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "Yerel örnek sağlık kontrolü (health-check) uç noktasını devre dışı bırakın."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "Ortaklık bağlantısı",
     "dismissAriaLabel": "Kapat"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise <gateway-alias>/<model> mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise &lt;gateway-alias&gt;/&lt;model&gt; mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
   "radarPage": {
     "title": "Radar Kataloğu",
     "subtitle": "Topluluk zekası ile zenginleştirilmiş ücretsiz model kataloğu",

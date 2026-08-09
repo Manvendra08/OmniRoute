@@ -937,7 +937,7 @@
   "disabled": "Disabilitato",
   "featureFlagOmnirouteEmergencyFallbackDescription": "Indirizza le richieste con budget esaurito al provider/modello di fallback gratuito di emergenza.",
   "featureFlagArenaEloSyncEnabledDescription": "Abilita la sincronizzazione periodica dell'ELO della classifica Arena AI per le graduatorie di intelligenza dei modelli.",
-  "featureFlagExposeCcDiscoveryAliasesDescription": "Mostra gli id specchio claude/<provider>/<model> su /v1/models in modo che la scoperta dei modelli gateway di Claude Code elenchi i modelli non-Claude. Attenzione: raddoppia le voci nel catalogo per tutti i client quando abilitato globalmente.",
+  "featureFlagExposeCcDiscoveryAliasesDescription": "Mostra gli id specchio claude/&lt;provider&gt;/&lt;model&gt; su /v1/models in modo che la scoperta dei modelli gateway di Claude Code elenchi i modelli non-Claude. Attenzione: raddoppia le voci nel catalogo per tutti i client quando abilitato globalmente.",
   "sidebar": {
     "home": "Casa",
     "dashboard": "Pannello di controllo",
@@ -2514,7 +2514,7 @@
       "always": "Sempre"
     },
     "ccDiscoveryInfoButton": "Come abilitare la scoperta in Claude Code",
-    "ccDiscoveryInfoTooltip": "Mostra i modelli non-Claude sotto gli id specchio claude/<provider>/<model> così la scoperta modelli gateway di Claude Code può elencarli. Raddoppia le voci nel catalogo per tutti i client quando abilitato globalmente.",
+    "ccDiscoveryInfoTooltip": "Mostra i modelli non-Claude sotto gli id specchio claude/&lt;provider&gt;/&lt;model&gt; così la scoperta modelli gateway di Claude Code può elencarli. Raddoppia le voci nel catalogo per tutti i client quando abilitato globalmente.",
     "ccDiscoveryInfoLink": "Apri le Flag Funzionalità",
     "ccOnboardingTitle": "settings.json per la scoperta modelli gateway",
     "ccOnboardingCopy": "Copia",
@@ -5202,7 +5202,7 @@
     "interceptionLoadError": "Impossibile caricare le impostazioni di intercettazione: {error}",
     "interceptionSaveError": "Impossibile salvare le impostazioni di intercettazione: {error}",
     "ccAliasSectionTitle": "Esponi in Claude Code (claude/…)",
-    "ccAliasSectionHint": "Mostra i modelli di questo provider sotto gli id specchio claude/<provider>/<model> così la scoperta modelli gateway di Claude Code può elencarli. Disattivato per impostazione predefinita — abilitarlo raddoppia le voci nel catalogo per tutti i client.",
+    "ccAliasSectionHint": "Mostra i modelli di questo provider sotto gli id specchio claude/&lt;provider&gt;/&lt;model&gt; così la scoperta modelli gateway di Claude Code può elencarli. Disattivato per impostazione predefinita — abilitarlo raddoppia le voci nel catalogo per tutti i client.",
     "ccAliasProviderLevelLabel": "Impostazione predefinita del provider",
     "ccAliasModelOverridesLabel": "Sostituzioni per modello",
     "ccAliasModelOverrideAriaLabel": "Sostituzione per {modelId}",
@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "Il dominio dell'organizzazione è obbligatorio",
     "denoRelayDeployFailed": "Deno Deploy non riuscito",
     "denoRelayTokenHint": "Token dell'organizzazione (prefisso ddo_) da console.deno.com → Organization → Settings → Organization Tokens. Utilizzato una sola volta per il deploy e mai memorizzato.",
-    "denoRelayOrgDomainHint": "Il dominio predefinito della tua organizzazione Deno Deploy (es. acme.deno.net). Il relay sarà raggiungibile all'indirizzo https://<app-name>.<org-slug>.deno.net.",
+    "denoRelayOrgDomainHint": "Il dominio predefinito della tua organizzazione Deno Deploy (es. acme.deno.net). Il relay sarà raggiungibile all'indirizzo https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net.",
     "proxyFreePoolFilterProtocol": "Filtra per protocollo",
     "proxyFreePoolProtocol": "Protocollo",
     "proxyFreePoolCountryPlaceholder": "Paese (es. US)",
@@ -11877,7 +11877,7 @@
         "description": "Dopo la sincronizzazione provider-modello, rigenera i profili ~/.codex/*.config.toml dal catalogo live. Questa operazione non modifica mai la configurazione attiva o predefinita di Codex ed è disattivata per impostazione predefinita."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "Dopo la sincronizzazione provider-modello, rigenera i profili ~/.claude/profiles/<name>/settings.json dal catalogo live. Questa operazione non modifica mai la configurazione attiva o predefinita di Claude ed è disattivata per impostazione predefinita."
+        "description": "Dopo la sincronizzazione provider-modello, rigenera i profili ~/.claude/profiles/&lt;name&gt;/settings.json dal catalogo live. Questa operazione non modifica mai la configurazione attiva o predefinita di Claude ed è disattivata per impostazione predefinita."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "Disabilita l'endpoint di health check dell'istanza locale."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "Link partner",
     "dismissAriaLabel": "Ignora"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "Mostra gli id specchio <gateway-alias>/<model> su /v1/models per i modelli il cui proprietario canonico non ha credenziali attive ma un gateway di transito con una credenziale attiva li instrada. Attenzione: aggiunge voci nel catalogo per tutti i client quando abilitato globalmente.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "Mostra gli id specchio &lt;gateway-alias&gt;/&lt;model&gt; su /v1/models per i modelli il cui proprietario canonico non ha credenziali attive ma un gateway di transito con una credenziale attiva li instrada. Attenzione: aggiunge voci nel catalogo per tutti i client quando abilitato globalmente.",
   "radarPage": {
     "title": "Catalogo Radar",
     "subtitle": "Catalogo di modelli gratuito arricchito con intelligenza della comunità",

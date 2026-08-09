@@ -937,7 +937,7 @@
   "disabled": "Đã tắt",
   "featureFlagOmnirouteEmergencyFallbackDescription": "Định tuyến các yêu cầu đã hết ngân sách đến nhà cung cấp/mô hình dự phòng khẩn cấp miễn phí.",
   "featureFlagArenaEloSyncEnabledDescription": "Bật đồng bộ ELO định kỳ từ bảng xếp hạng Arena AI để xếp hạng năng lực của mô hình.",
-  "featureFlagExposeCcDiscoveryAliasesDescription": "Công bố các id phản chiếu claude/<provider>/<model> trên /v1/models để tính năng khám phá mô hình qua gateway của Claude Code liệt kê được các mô hình không phải Claude. Cảnh báo: khi bật ở phạm vi toàn cục, số mục trong danh mục tăng gấp đôi với mọi client.",
+  "featureFlagExposeCcDiscoveryAliasesDescription": "Công bố các id phản chiếu claude/&lt;provider&gt;/&lt;model&gt; trên /v1/models để tính năng khám phá mô hình qua gateway của Claude Code liệt kê được các mô hình không phải Claude. Cảnh báo: khi bật ở phạm vi toàn cục, số mục trong danh mục tăng gấp đôi với mọi client.",
   "sidebar": {
     "home": "Trang chủ",
     "dashboard": "Trang tổng quan",
@@ -2514,7 +2514,7 @@
       "always": "Luôn bật"
     },
     "ccDiscoveryInfoButton": "Cách bật khám phá mô hình trong Claude Code",
-    "ccDiscoveryInfoTooltip": "Công bố các mô hình không phải Claude dưới dạng id phản chiếu claude/<provider>/<model> để tính năng khám phá mô hình qua gateway của Claude Code có thể liệt kê chúng. Khi bật ở phạm vi toàn cục, số mục trong danh mục tăng gấp đôi với mọi client.",
+    "ccDiscoveryInfoTooltip": "Công bố các mô hình không phải Claude dưới dạng id phản chiếu claude/&lt;provider&gt;/&lt;model&gt; để tính năng khám phá mô hình qua gateway của Claude Code có thể liệt kê chúng. Khi bật ở phạm vi toàn cục, số mục trong danh mục tăng gấp đôi với mọi client.",
     "ccDiscoveryInfoLink": "Mở Feature Flags",
     "ccOnboardingTitle": "settings.json cho việc khám phá mô hình qua gateway",
     "ccOnboardingCopy": "Sao chép",
@@ -5202,7 +5202,7 @@
     "interceptionLoadError": "Không thể tải cài đặt chặn: {error}",
     "interceptionSaveError": "Không thể lưu cài đặt chặn: {error}",
     "ccAliasSectionTitle": "Hiển thị trong Claude Code (claude/…)",
-    "ccAliasSectionHint": "Công bố các mô hình của nhà cung cấp này dưới dạng id phản chiếu claude/<provider>/<model> để tính năng khám phá mô hình qua gateway của Claude Code có thể liệt kê chúng. Mặc định tắt — bật lên sẽ nhân đôi số mục trong danh mục với mọi client.",
+    "ccAliasSectionHint": "Công bố các mô hình của nhà cung cấp này dưới dạng id phản chiếu claude/&lt;provider&gt;/&lt;model&gt; để tính năng khám phá mô hình qua gateway của Claude Code có thể liệt kê chúng. Mặc định tắt — bật lên sẽ nhân đôi số mục trong danh mục với mọi client.",
     "ccAliasProviderLevelLabel": "Mặc định của nhà cung cấp",
     "ccAliasModelOverridesLabel": "Ghi đè theo từng mô hình",
     "ccAliasModelOverrideAriaLabel": "Ghi đè cho {modelId}",
@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "Yêu cầu phải có tên miền tổ chức",
     "denoRelayDeployFailed": "Triển khai Deno Deploy thất bại",
     "denoRelayTokenHint": "Token tổ chức (tiền tố ddo_) lấy từ console.deno.com → Organization → Settings → Organization Tokens. Chỉ được sử dụng một lần để triển khai và không bao giờ được lưu trữ.",
-    "denoRelayOrgDomainHint": "Tên miền mặc định của tổ chức Deno Deploy của bạn (ví dụ: acme.deno.net). Dịch vụ chuyển tiếp sẽ có thể truy cập tại https://<app-name>.<org-slug>.deno.net.",
+    "denoRelayOrgDomainHint": "Tên miền mặc định của tổ chức Deno Deploy của bạn (ví dụ: acme.deno.net). Dịch vụ chuyển tiếp sẽ có thể truy cập tại https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net.",
     "proxyFreePoolFilterProtocol": "Lọc theo giao thức",
     "proxyFreePoolProtocol": "Giao thức",
     "proxyFreePoolCountryPlaceholder": "Quốc gia (ví dụ: US)",
@@ -11877,7 +11877,7 @@
         "description": "Sau khi đồng bộ mô hình nhà cung cấp, tạo lại các hồ sơ ~/.codex/*.config.toml từ danh mục trực tiếp. Không bao giờ thay đổi cấu hình Codex đang hoạt động hoặc cấu hình mặc định. Tính năng này mặc định tắt."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "Sau khi đồng bộ mô hình nhà cung cấp, tạo lại các hồ sơ Claude Code tại ~/.claude/profiles/<name>/settings.json từ danh mục trực tiếp. Không bao giờ thay đổi cấu hình Claude đang hoạt động hoặc cấu hình mặc định. Tính năng này mặc định tắt."
+        "description": "Sau khi đồng bộ mô hình nhà cung cấp, tạo lại các hồ sơ Claude Code tại ~/.claude/profiles/&lt;name&gt;/settings.json từ danh mục trực tiếp. Không bao giờ thay đổi cấu hình Claude đang hoạt động hoặc cấu hình mặc định. Tính năng này mặc định tắt."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "Tắt endpoint kiểm tra tình trạng của phiên bản cục bộ."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "Partner link",
     "dismissAriaLabel": "Dismiss"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "Công bố các id phản chiếu <gateway-alias>/<model> trên /v1/models cho các mô hình có chủ sở hữu chuẩn không có thông tin xác thực hoạt động nhưng một cổng chuyển tiếp có thông tin xác thực hoạt động định tuyến được chúng. Cảnh báo: khi bật, số mục trong danh mục tăng lên với mọi client.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "Công bố các id phản chiếu &lt;gateway-alias&gt;/&lt;model&gt; trên /v1/models cho các mô hình có chủ sở hữu chuẩn không có thông tin xác thực hoạt động nhưng một cổng chuyển tiếp có thông tin xác thực hoạt động định tuyến được chúng. Cảnh báo: khi bật, số mục trong danh mục tăng lên với mọi client.",
   "radarPage": {
     "title": "Danh mục Radar",
     "subtitle": "Danh mục mô hình miễn phí được làm phong phú bởi trí tuệ cộng đồng",

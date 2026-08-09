@@ -937,7 +937,7 @@
   "disabled": "முடக்கப்பட்டது",
   "featureFlagOmnirouteEmergencyFallbackDescription": "பட்ஜெட் தீர்ந்த கோரிக்கைகளை அவசரகால இலவச ஃபால்பேக் வழங்குநர்/மாடலுக்கு வழிசெலுத்துங்கள்.",
   "featureFlagArenaEloSyncEnabledDescription": "மாடல் நுண்ணறிவு தரவரிசைகளுக்காக அவ்வப்போதான Arena AI லீடர்போர்டு ELO ஒத்திசைவை இயக்குங்கள்.",
-  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/<provider>/<model> mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
+  "featureFlagExposeCcDiscoveryAliasesDescription": "__MISSING__:Advertise claude/&lt;provider&gt;/&lt;model&gt; mirror ids on /v1/models so Claude Code gateway model discovery lists non-Claude models. Warning: doubles catalog entries for all clients when enabled globally.",
   "sidebar": {
     "home": "Home",
     "dashboard": "Dashboard",
@@ -2514,7 +2514,7 @@
       "always": "எப்போதும்"
     },
     "ccDiscoveryInfoButton": "__MISSING__:How to enable discovery in Claude Code",
-    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
+    "ccDiscoveryInfoTooltip": "__MISSING__:Advertise non-Claude models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Doubles catalog entries for all clients when enabled globally.",
     "ccDiscoveryInfoLink": "__MISSING__:Open Feature Flags",
     "ccOnboardingTitle": "__MISSING__:settings.json for gateway model discovery",
     "ccOnboardingCopy": "__MISSING__:Copy",
@@ -5202,7 +5202,7 @@
     "interceptionLoadError": "இடைமறிப்பு அமைப்புகளை ஏற்றுவதில் தோல்வி: {error}",
     "interceptionSaveError": "இடைமறிப்பு அமைப்புகளைச் சேமிப்பதில் தோல்வி: {error}",
     "ccAliasSectionTitle": "__MISSING__:Expose in Claude Code (claude/…)",
-    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/<provider>/<model> mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
+    "ccAliasSectionHint": "__MISSING__:Advertise this provider's models under claude/&lt;provider&gt;/&lt;model&gt; mirror ids so Claude Code's gateway model discovery can list them. Off by default — enabling this doubles catalog entries for all clients.",
     "ccAliasProviderLevelLabel": "__MISSING__:Provider default",
     "ccAliasModelOverridesLabel": "__MISSING__:Per-model overrides",
     "ccAliasModelOverrideAriaLabel": "__MISSING__:Override for {modelId}",
@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "நிறுவன டொமைன் தேவை",
     "denoRelayDeployFailed": "Deno Deploy தோல்வியடைந்தது",
     "denoRelayTokenHint": "console.deno.com → Organization → Settings → Organization Tokens இலிருந்து பெறப்படும் நிறுவன டோக்கன் (முன்னொட்டு ddo_). வரிசைப்படுத்தலுக்கு ஒரு முறை மட்டுமே பயன்படுத்தப்படும் மற்றும் ஒருபோதும் சேமிக்கப்படாது.",
-    "denoRelayOrgDomainHint": "உங்கள் Deno Deploy நிறுவனத்தின் இயல்புநிலை டொமைன் (எ.கா. acme.deno.net). ரிலேவை https://<app-name>.<org-slug>.deno.net இல் அணுக முடியும்.",
+    "denoRelayOrgDomainHint": "உங்கள் Deno Deploy நிறுவனத்தின் இயல்புநிலை டொமைன் (எ.கா. acme.deno.net). ரிலேவை https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net இல் அணுக முடியும்.",
     "proxyFreePoolFilterProtocol": "புரோட்டோகால் மூலம் வடிகட்டவும்",
     "proxyFreePoolProtocol": "புரோட்டோகால்",
     "proxyFreePoolCountryPlaceholder": "நாடு (எ.கா. US)",
@@ -11877,7 +11877,7 @@
         "description": "வழங்குநர்-மாடல் ஒத்திசைவுக்குப் பிறகு, நேரலை அட்டவணையில் இருந்து ~/.codex/*.config.toml சுயவிவரங்களை மீண்டும் உருவாக்கவும். இது செயலில் உள்ள அல்லது இயல்புநிலை Codex உள்ளமைவை ஒருபோதும் மாற்றாது மற்றும் இயல்பாகவே முடக்கப்பட்டிருக்கும்."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "வழங்குநர்-மாடல் ஒத்திசைவுக்குப் பிறகு, நேரலை அட்டவணையில் இருந்து ~/.claude/profiles/<name>/settings.json சுயவிவரங்களை மீண்டும் உருவாக்கவும். இது செயலில் உள்ள அல்லது இயல்புநிலை Claude உள்ளமைவை ஒருபோதும் மாற்றாது மற்றும் இயல்பாகவே முடக்கப்பட்டிருக்கும்."
+        "description": "வழங்குநர்-மாடல் ஒத்திசைவுக்குப் பிறகு, நேரலை அட்டவணையில் இருந்து ~/.claude/profiles/&lt;name&gt;/settings.json சுயவிவரங்களை மீண்டும் உருவாக்கவும். இது செயலில் உள்ள அல்லது இயல்புநிலை Claude உள்ளமைவை ஒருபோதும் மாற்றாது மற்றும் இயல்பாகவே முடக்கப்பட்டிருக்கும்."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "உள்ளூர் நிகழ்வு health-check இறுதிப்புள்ளியை முடக்கவும்."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "பங்குதாரர் இணைப்பு",
     "dismissAriaLabel": "நிராகரி"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise <gateway-alias>/<model> mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise &lt;gateway-alias&gt;/&lt;model&gt; mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
   "radarPage": {
     "title": "ரேடார் பட்டியல்",
     "subtitle": "சமூக அறிவியுடன் வளமான இலவச மாதிரி பட்டியல்",

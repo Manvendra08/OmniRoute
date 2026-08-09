@@ -6393,7 +6393,7 @@
     "denoRelayOrgDomainRequired": "Требуется домен организации",
     "denoRelayDeployFailed": "Развертывание Deno Deploy не удалось",
     "denoRelayTokenHint": "Токен организации (префикс ddo_) из console.deno.com → Organization → Settings → Organization Tokens. Используется один раз для развертывания и нигде не сохраняется.",
-    "denoRelayOrgDomainHint": "Домен по умолчанию вашей организации Deno Deploy (например, acme.deno.net). Релей будет доступен по адресу https://<app-name>.<org-slug>.deno.net.",
+    "denoRelayOrgDomainHint": "Домен по умолчанию вашей организации Deno Deploy (например, acme.deno.net). Релей будет доступен по адресу https://&lt;app-name&gt;.&lt;org-slug&gt;.deno.net.",
     "proxyFreePoolFilterProtocol": "Фильтровать по протоколу",
     "proxyFreePoolProtocol": "Протокол",
     "proxyFreePoolCountryPlaceholder": "Страна (например, US)",
@@ -11877,7 +11877,7 @@
         "description": "After provider-model synchronization, regenerate ~/.codex/*.config.toml profiles from the live catalog. This never changes the active or default Codex configuration and is off by default."
       },
       "OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES": {
-        "description": "After provider-model synchronization, regenerate ~/.claude/profiles/<name>/settings.json profiles from the live catalog. This never changes the active or default Claude configuration and is off by default."
+        "description": "After provider-model synchronization, regenerate ~/.claude/profiles/&lt;name&gt;/settings.json profiles from the live catalog. This never changes the active or default Claude configuration and is off by default."
       },
       "OMNIROUTE_DISABLE_LOCAL_HEALTHCHECK": {
         "description": "Disable the local instance health-check endpoint."
@@ -12236,7 +12236,7 @@
     "partnerLinkNote": "Партнерская ссылка",
     "dismissAriaLabel": "Закрыть"
   },
-  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise <gateway-alias>/<model> mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
+  "featureFlagExposeFunctionalGatewayMirrorsDescription": "__MISSING__:Advertise &lt;gateway-alias&gt;/&lt;model&gt; mirror ids on /v1/models for models whose canonical owner has no active credential but a passthrough gateway with an active credential routes them. Warning: adds catalog entries for all clients when enabled globally.",
   "radarPage": {
     "title": "Каталог Радар",
     "subtitle": "Бесплатный каталог моделей, обогащенный данными сообщества",
