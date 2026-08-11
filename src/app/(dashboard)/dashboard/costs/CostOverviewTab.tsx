@@ -1258,8 +1258,8 @@ function CostBreakdownTable({
             </tr>
           </thead>
           <tbody className="divide-y divide-border/20">
-            {rows.map((row) => (
-              <tr key={String(row[columns[0].key])} className="hover:bg-surface/20">
+            {rows.map((row, idx) => (
+              <tr key={`${String(row[columns[0].key])}-${idx}`} className="hover:bg-surface/20">
                 {columns.map((column) => (
                   <td
                     key={column.key}

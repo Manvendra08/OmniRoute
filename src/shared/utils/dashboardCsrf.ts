@@ -161,23 +161,24 @@ export function installDashboardCsrfFetch(): () => void {
   if (typeof globalThis.fetch !== "function") return () => {};
 
   if (installCount === 0) {
-    originalFetch = globalThis.fetch;
+    originalFetch = globalThis.fetch.bind(globalThis);
 
     globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+      const fetchFn = originalFetch || fetch;
       if (!originalFetch || !sameOriginDashboardMutation(input, init)) {
-        return originalFetch ? originalFetch(input, init) : fetch(input, init);
+        return fetchFn(input, init);
       }
 
       const headers = mergedHeaders(input, init);
       if (headers.has(DASHBOARD_CSRF_HEADER)) {
-        return originalFetch(input, init);
+        return fetchFn(input, init);
       }
 
       const token = currentDashboardCsrfToken() ?? (await getDashboardCsrfToken());
-      if (!token) return originalFetch(input, init);
+      if (!token) return fetchFn(input, init);
 
       headers.set(DASHBOARD_CSRF_HEADER, token);
-      return originalFetch(input, { ...init, headers });
+      return fetchFn(input, { ...init, headers });
     }) as typeof fetch;
   }
 

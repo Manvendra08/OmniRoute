@@ -66,7 +66,8 @@ function isMirrorableId(id: string): boolean {
   if (id.length === 0) return false;
   if (ALREADY_CLAUDE_RE.test(id)) return false;
   if (id.startsWith(NO_THINKING_PREFIX)) return false;
-  return !EFFORT_SUFFIX_RE.test(id);
+  if (!id.startsWith("antigravity/") && EFFORT_SUFFIX_RE.test(id)) return false;
+  return true;
 }
 
 export function appendCcDiscoveryAliases<T extends CcDiscoveryCatalogEntry>(

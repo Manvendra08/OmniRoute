@@ -1,3 +1,7 @@
+// MCP stdio transport requires stdout to be strictly JSON-RPC messages.
+// Redirect console methods and non-JSON stdout writes to stderr so background DB/startup logs never corrupt stdout.
+import "./stdio-wrapper.ts";
+
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import {

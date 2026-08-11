@@ -2,10 +2,14 @@ import os from "os";
 import path from "path";
 import { createRequire } from "node:module";
 
-const _require = createRequire(import.meta.url);
-const Database = process.versions.bun
-  ? (_require("bun:sqlite").Database as typeof import("better-sqlite3"))
-  : (_require("better-sqlite3") as typeof import("better-sqlite3"));
+let Database: any = null;
+try {
+  Database = process.versions.bun
+    ? (_require("bun:sqlite").Database as typeof import("better-sqlite3"))
+    : (_require("better-sqlite3") as typeof import("better-sqlite3"));
+} catch {
+  Database = null;
+}
 
 function databaseOptions(readonly = false) {
   return readonly ? { readonly: true } : { readwrite: true, create: true };
@@ -17,6 +21,7 @@ const getOmpDbPath = () => path.join(getOmpDir(), "agent.db");
 export function getOmpCredentials(providerId: string) {
   const dbPath = getOmpDbPath();
   try {
+    if (!Database) return null;
     const db = new Database(dbPath, databaseOptions(true));
     const row = db
       .prepare(

@@ -1,0 +1,9 @@
+2026/08/07-23:27:09.563 1958 Reusing MANIFEST C:\Users\manve\OmniRoute\arena-session\Default\Local Storage\leveldb/MANIFEST-000001
+2026/08/07-23:27:09.566 1958 Recovering log #5
+2026/08/07-23:27:09.569 1958 Level-0 table #8: started
+2026/08/07-23:27:09.593 1958 Level-0 table #8: 103644 bytes OK
+2026/08/07-23:27:09.594 1958 Recovering log #7
+2026/08/07-23:27:09.610 1958 Reusing old log C:\Users\manve\OmniRoute\arena-session\Default\Local Storage\leveldb/000007.log 
+2026/08/07-23:27:09.614 1958 Delete type=0 #5
+2026/08/07-23:27:18.934 1958 Level-0 table #10: started
+2026/08/07-23:27:18.959 1958 Level-0 table #10: 103572 bytes OK

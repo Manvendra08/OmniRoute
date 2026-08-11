@@ -17,6 +17,9 @@ const DEFAULT_HOST = "127.0.0.1";
  * These match the loopback HTTP listener at port 20128.
  */
 export const DEFAULT_ALLOWED_ORIGINS: readonly string[] = Object.freeze([
+  "http://127.0.0.1:3000",
+  "http://localhost:3000",
+  "http://[::1]:3000",
   "http://127.0.0.1:20128",
   "http://localhost:20128",
   "http://[::1]:20128",
@@ -36,11 +39,17 @@ export function parseCsvEnv(value: string | undefined | null): Set<string> {
 }
 
 /**
- * Build the static origin allow-list from defaults + LIVE_WS_ALLOWED_ORIGINS.
+ * Build the static origin allow-list from defaults + LIVE_WS_ALLOWED_ORIGINS + PORT.
  */
 export function buildAllowedOrigins(env: NodeJS.ProcessEnv = process.env): Set<string> {
   const extra = parseCsvEnv(env.LIVE_WS_ALLOWED_ORIGINS);
-  return new Set([...DEFAULT_ALLOWED_ORIGINS, ...extra]);
+  const port = env.PORT || "3000";
+  const dynamicOrigins = [
+    `http://127.0.0.1:${port}`,
+    `http://localhost:${port}`,
+    `http://[::1]:${port}`,
+  ];
+  return new Set([...DEFAULT_ALLOWED_ORIGINS, ...dynamicOrigins, ...extra]);
 }
 
 /**

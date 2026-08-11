@@ -47,8 +47,8 @@ const BX_UMIDTOKEN_FALLBACK = "T2gA0000000000000000000000000000000000000000";
 // header the upstream returns HTTP 200 with `{"success":false,"data":{"code":"Bad_Request"}}`
 // for every completion request, even with a valid session. The version string is
 // the SPA build identifier shipped in the React client's `version` request header.
-// Pinned from a live capture (2026-07); bump if Qwen ships a breaking change.
-const QWEN_SPA_VERSION = "0.2.66";
+// Pinned from a live capture (2026-08); bump if Qwen ships a breaking change.
+const QWEN_SPA_VERSION = "0.2.81";
 
 const MODEL_ALIASES: Record<string, string> = {
   // Legacy OmniRoute ids → current upstream catalog (GET /api/models).
@@ -61,7 +61,9 @@ const MODEL_ALIASES: Record<string, string> = {
   // Note: `qwen3-coder-plus` is a real upstream model id (Qwen3-Coder) and
   // must NOT be aliased — the previous `"qwen3-coder-plus": "qwen3.7-max"`
   // entry silently rewrote valid coder requests to the wrong model.
-  "qwen3-coder-flash": "qwen3.6-plus",
+  "qwen3.8-coder-flash": "qwen3.6-plus",
+  "qwen3.8-max": "qwen3.7-max",
+  "qwen3.8-plus": "qwen3.7-plus",
   qwen: "qwen3.7-max",
   qwen3: "qwen3.7-max",
 };
@@ -353,6 +355,9 @@ export class QwenWebExecutor extends BaseExecutor {
         for (const line of lines) {
           const delta = parseSseDelta(line);
           if (!delta) continue;
+          if (delta.kind === "error" && delta.error) {
+            throw new Error(delta.error);
+          }
           if (delta.kind === "answer") content += delta.text;
           else if (delta.kind === "think") reasoning += delta.text;
         }
@@ -493,5 +498,8 @@ function parseSseDelta(line: string): { kind: "answer" | "think"; text: string }
   if (phase === "answer" || phase === null || phase === undefined) {
     return { kind: "answer", text: content };
   }
-  return null;
+  // Unrecognized phase — treat as answer content rather than dropping the frame
+  // entirely. Qwen periodically adds new phase values (e.g. after SPA version
+  // bumps); silently dropping them causes "Provider returned empty content".
+  return { kind: "answer", text: content };
 }

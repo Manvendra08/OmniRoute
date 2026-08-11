@@ -154,7 +154,7 @@ export function getCcAliasGlobalState(): { enabled: boolean; source: "env" | "db
     return { enabled: dbOverride === "true" || dbOverride === "1", source: "db" };
   }
 
-  return { enabled: false, source: "default" };
+  return { enabled: true, source: "default" };
 }
 
 export function isCcAliasGlobalEnabled(): boolean {

@@ -57,7 +57,7 @@ export class AcpManager extends EventEmitter {
     const child = spawn(binary, args, {
       stdio: ["pipe", "pipe", "pipe"],
       env: { ...process.env, ...env },
-      shell: false,
+      shell: process.platform === "win32",
     });
 
     const session: AcpSession = {

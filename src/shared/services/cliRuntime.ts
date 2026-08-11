@@ -295,10 +295,12 @@ const parseBoolean = (value: unknown, defaultValue = true) => {
 export const shouldUseShellForCommand = (command: string): boolean => {
   if (!isWindows()) return false;
 
-  // Windows npm CLI wrappers are usually .cmd/.bat files and require cmd.exe.
-  // Direct executables should not go through the shell: absolute paths with spaces
-  // (for example C:\Users\Name With Spaces\...\claude.exe) are split by cmd.exe.
-  return /\.(?:cmd|bat)$/i.test(command);
+  // Windows npm CLI wrappers are usually .cmd/.bat files or extensionless names ('claude', 'codex').
+  // They require cmd.exe to execute properly without triggering spawn EINVAL on Windows.
+  if (/\.(?:cmd|bat)$/i.test(command)) return true;
+  if (!path.extname(command)) return true;
+
+  return false;
 };
 
 const runProcess = (

@@ -49,7 +49,22 @@ export async function startMcpCli(rootDir = ROOT) {
     const child = spawn(process.execPath, [...loaderArgs, mcpEntry], {
       cwd: rootDir,
       env: process.env,
-      stdio: "inherit",
+      stdio: ["inherit", "pipe", "inherit"],
+    });
+
+    child.stdout.on("data", (chunk) => {
+      const str = typeof chunk === "string" ? chunk : chunk?.toString?.("utf-8") || "";
+      const trimmed = str.trim();
+      if (
+        trimmed.startsWith('{"jsonrpc"') ||
+        trimmed.startsWith('{"id"') ||
+        trimmed.startsWith('{"method"') ||
+        (trimmed.startsWith("{") && trimmed.endsWith("}"))
+      ) {
+        process.stdout.write(chunk);
+      } else {
+        process.stderr.write(chunk);
+      }
     });
 
     child.once("error", reject);

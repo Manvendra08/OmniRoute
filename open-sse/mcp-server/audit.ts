@@ -207,10 +207,14 @@ function toString(value: unknown): string {
 }
 
 async function openBetterSqliteAuditDb(dbPath: string): Promise<AuditDatabase> {
-  const Database = (await import("better-sqlite3")).default as unknown as new (
-    dbPath: string
-  ) => AuditDatabase;
-  return new Database(dbPath);
+  try {
+    const { createRequire } = await import("node:module");
+    const _req = createRequire(import.meta.url);
+    const Database = _req("better-sqlite3") as unknown as new (dbPath: string) => AuditDatabase;
+    return new Database(dbPath);
+  } catch (err) {
+    throw new Error(`better-sqlite3 is unavailable: ${err instanceof Error ? err.message : String(err)}`);
+  }
 }
 
 function nodeSqliteFallbackAvailable(): boolean {

@@ -14,6 +14,28 @@
  * All other commands are routed through Commander (bin/cli/program.mjs).
  */
 
+// MCP stdio transport uses stdout exclusively for JSON-RPC messages.
+// Redirect console.log/info/debug/warn AND process.stdout.write to stderr immediately at top of entrypoint
+// so no startup output corrupts the protocol.
+if (process.argv.includes("--mcp") || process.argv.includes("mcp")) {
+  const { Console } = await import("node:console");
+  const stderrConsole = new Console({ stdout: process.stderr, stderr: process.stderr });
+  console.log = stderrConsole.log.bind(stderrConsole);
+  console.info = stderrConsole.info.bind(stderrConsole);
+  console.debug = stderrConsole.debug.bind(stderrConsole);
+  console.warn = stderrConsole.warn.bind(stderrConsole);
+
+  const origStdoutWrite = process.stdout.write.bind(process.stdout);
+  process.stdout.write = function (chunk, encoding, callback) {
+    const str = typeof chunk === "string" ? chunk : chunk?.toString?.("utf-8") || "";
+    const trimmed = str.trim();
+    if (trimmed.startsWith('{"jsonrpc"') || trimmed.startsWith('{"id"') || trimmed.startsWith('{"method"') || (trimmed.startsWith('{') && trimmed.endsWith('}'))) {
+      return origStdoutWrite(chunk, encoding, callback);
+    }
+    return process.stderr.write(chunk, encoding, callback);
+  };
+}
+
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -58,15 +80,6 @@ await import("../open-sse/utils/setupPolyfill.ts");
 const { registerAliasResolver } = await import("./aliasResolver.mjs");
 await registerAliasResolver(ROOT);
 
-// MCP stdio transport uses stdout exclusively for JSON-RPC messages.
-// Redirect console.log/warn to stderr early (before loadEnvFile and DB init)
-// so no startup output corrupts the protocol.
-if (process.argv.includes("--mcp")) {
-  const { Console } = await import("node:console");
-  const stderrConsole = new Console({ stdout: process.stderr, stderr: process.stderr });
-  console.log = stderrConsole.log.bind(stderrConsole);
-  console.warn = stderrConsole.warn.bind(stderrConsole);
-}
 
 // Electron persists secrets (JWT_SECRET, API_KEY_SECRET, STORAGE_ENCRYPTION_KEY) to
 // `<DATA_DIR>/server.env` (electron/main.js), never `.env`. Migrating an existing

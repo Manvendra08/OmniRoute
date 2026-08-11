@@ -27,6 +27,15 @@ if (typeof Promise.withResolvers === "undefined") {
   } as any;
 }
 
+import dns from "node:dns";
+
+// Prefer IPv4 over IPv6 for all DNS lookups to prevent outbound timeouts on broken IPv6 routes
+try {
+  dns.setDefaultResultOrder("ipv4first");
+} catch {
+  // Ignore for older Node versions
+}
+
 // Polyfill WebSocket for Node.js < 22 compatibility (specifically Node 20.20.2)
 if (typeof globalThis.WebSocket === "undefined") {
   (globalThis as any).WebSocket = WebSocket;

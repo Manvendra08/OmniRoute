@@ -164,8 +164,10 @@ function baseChunk(model: string) {
   };
 }
 
+const encoder = new TextEncoder();
+
 function enqueueSse(controller: ReadableStreamDefaultController, chunk: Record<string, unknown>) {
-  controller.enqueue(`data: ${JSON.stringify(chunk)}\n\n`);
+  controller.enqueue(encoder.encode(`data: ${JSON.stringify(chunk)}\n\n`));
 }
 
 function emitStopAndDone(controller: ReadableStreamDefaultController, model: string) {
@@ -173,7 +175,7 @@ function emitStopAndDone(controller: ReadableStreamDefaultController, model: str
     ...baseChunk(model),
     choices: [{ index: 0, delta: {}, finish_reason: "stop" }],
   });
-  controller.enqueue("data: [DONE]\n\n");
+  controller.enqueue(encoder.encode("data: [DONE]\n\n"));
   controller.close();
 }
 

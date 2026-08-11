@@ -292,8 +292,8 @@ export class OpencodeExecutor extends BaseExecutor {
     // is deployment-specific. So it stays OFF by default and the VPS operator enables it
     // with OPENCODE_SYNTHESIZE_CLI_HEADERS=true (values env-overridable). Client-supplied
     // headers always take precedence.
-    const synthesizeCli = /^(1|true|yes|on)$/i.test(
-      process.env.OPENCODE_SYNTHESIZE_CLI_HEADERS?.trim() ?? ""
+    const synthesizeCli = !/^(0|false|no|off)$/i.test(
+      process.env.OPENCODE_SYNTHESIZE_CLI_HEADERS?.trim() ?? "true"
     );
     const cliDefaults = synthesizeCli
       ? (() => {
@@ -356,6 +356,10 @@ export class OpencodeExecutor extends BaseExecutor {
         if (mb.reasoning_effort === undefined) {
           mb.reasoning_effort = parsed.effort;
         }
+      }
+      // Fix: The upstream OpenCode endpoint expects the base model ID without the provider prefix.
+      if (typeof mb.model === "string" && mb.model.includes("/")) {
+        mb.model = mb.model.split("/").pop();
       }
     }
     // #1543 / upstream PR #1099: thinking-mode upstreams routed through OpenCode

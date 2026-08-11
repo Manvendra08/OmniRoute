@@ -232,6 +232,10 @@ export function needsThirdPartyCloak(name: string): boolean {
   // tools[] is cloaked), produces "Tool reference 'mcp__…' not found in available
   // tools" 400s on the native claude OAuth path. Leave the MCP namespace alone.
   if (name.startsWith("mcp__")) return false;
+  // Also exempt single-underscore `mcp_<server>_<tool>` names registered by some
+  // MCP server implementations (e.g. @modelcontextprotocol/server-filesystem).
+  // Cloaking these produces the same round-trip asymmetry 400s.
+  if (name.startsWith("mcp_")) return false;
   return /[a-z]/.test(name.charAt(0)) || name.includes("_") || name.includes("-");
 }
 
